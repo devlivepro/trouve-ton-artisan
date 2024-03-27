@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background-color: #eee;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.bold {
+  font-weight: 600;
+}
+.semi-bold {
+  font-weight: 400;
+}
+.font {
+  font-family: "Nunito Sans", sans-serif;
+}
+.container {
+    margin: 0 auto;
+    max-width: 970px;
+}
+.logo-img {
+  height: 100px;
+  display: inline-block;
+}
