@@ -7,7 +7,7 @@ import '../assets/css/styles.css';
 function Header() {
   return (
     <header>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg" className="color-template1">
         <Container
           className="justify-content-between"
         >
@@ -33,7 +33,7 @@ function Header() {
               <Nav.Link href="#">Alimentation</Nav.Link>
             </Nav>
             {/* Search bar */}
-            <Form inline>
+            <Form>
               <FormControl
                 type="text"
                 placeholder="Search..."

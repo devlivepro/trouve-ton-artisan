@@ -17,11 +17,90 @@ a {
 .font {
   font-family: "Nunito Sans", sans-serif;
 }
+.color-template1 {
+  background-color: #f1f8fc;
+}
+.color-template2 {
+  background-color: #0074c7;
+}
+.color-template3 {
+  background-color: #00497c;
+}
+.color-template4 {
+  background-color: #384050;
+}
+.color-template5 {
+  background-color: #cd2c2e;
+}
+.color-template6 {
+  background-color: #82b864;
+}
+.navbar {
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.0793474);
+}
 .container {
-    margin: 0 auto;
-    max-width: 970px;
+  margin: 0 auto;
+  max-width: 1320px;
+}
+aside {
+  width: 25%; /* Définissez la largeur de votre barre latérale */
+  background-color: #f1f8fc; /* Couleur de fond */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .logo-img {
   height: 100px;
   display: inline-block;
+}
+.find-artisan-section {
+  margin-top: 10px;
+  padding: 0;
+  border-radius: 8px;
+}
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00497c;
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+.step {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0074c7;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+  width: calc(33.33% - 20px);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+  margin-top: 0;
 }
