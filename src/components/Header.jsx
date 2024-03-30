@@ -27,7 +27,7 @@ function Header() {
             className="justify-content-end"
           >
             <Nav>
-              <Nav.Link href="#">Bâtiment</Nav.Link>
+              <Nav.Link href="/craftsman">Bâtiment</Nav.Link>
               <Nav.Link href="#">Services</Nav.Link>
               <Nav.Link href="#">Fabrication</Nav.Link>
               <Nav.Link href="#">Alimentation</Nav.Link>
