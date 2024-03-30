@@ -1,26 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import ShowArtisanNote from '../hooks/Show_artisan_note'; // Importation votre hook personnalisé
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Home() {
-  const [artisans, setArtisans] = useState([]);
-
-  useEffect(() => {
-    fetch("/datas.json")
-      .then((response) => response.json())
-      .then((data) => {
-        // Inclure tous les artisans
-        const allArtisans = data;
-        // Limiter aux trois premiers artisans
-        const topThreeArtisans = allArtisans.slice(0, 3);
-        // Mettre à jour l'état avec les artisans
-        setArtisans(topThreeArtisans);
-      })
-      .catch((error) =>
-        console.error("Erreur lors de la récupération des données :", error)
-      );
-  }, []);
+  const { artisans, renderStars } = ShowArtisanNote(); // Utilisation du hook personnalisé
 
   return (
     <div>
@@ -60,28 +45,30 @@ function Home() {
           </div>
         </section>
 
-        
         {/* Le top 3 des artisans */}
-          <section>
-            <h2>Les artisans du mois</h2>
-            <div className="card-container">
-              {artisans.slice(0, 3).map((artisan) => (
-                <div key={artisan.id} className="card">
-                  <h3>{artisan.name}</h3>
-                  <p>Spécialité: {artisan.specialty}</p>
-                  <p>Note: {artisan.note}</p>
-                  <p>Localisation: {artisan.location}</p>
-                  <p>À propos: {artisan.about}</p>
-                  <p>Email: {artisan.email}</p>
-                  <p>
-                    Site Web: <a href={artisan.website}>{artisan.website}</a>
-                  </p>
+        <section>
+          <h2 className="mb-4">Les artisans du mois</h2>
+          <div className="row">
+            {artisans.slice(0, 3).map((artisan) => (
+              <div key={artisan.id} className="col-md-4 mb-4">
+                <div className="card">
+                  <div className="card-body">
+                    <h3 className="card-title">{artisan.name}</h3>
+                    <p className="card-text">
+                      Note : {renderStars(artisan.note)}
+                    </p>
+                    <p className="card-text">Spécialité: {artisan.specialty}</p>
+                    <p className="card-text">
+                      Localisation: {artisan.location}
+                    </p>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </section>
-
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
+      <Footer />
     </div>
   );
 }
