@@ -39,6 +39,14 @@ div{
 .color-template6 {
   background-color: #82b864;
 }
+.border-text{
+  border-bottom: 5px solid #0074c7;
+  margin-top: 20px;
+  margin-block-end: 6%;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;;
+}
 .star-icon {
   color: #cd2c2e;
 }
