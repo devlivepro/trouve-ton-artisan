@@ -1,11 +1,16 @@
 import React from "react";
-import ShowArtisanNote from '../hooks/Show_artisan_note'; // Importation votre hook personnalisé
+import ShowArtisanNote from "../hooks/Show_artisan_note"; // Importation votre hook personnalisé
 
+// Import pages
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+// Import hook
+import Stars_icon from "../hooks/Stars_icon";
+
 function Home() {
-  const { artisans, renderStars } = ShowArtisanNote(); // Utilisation du hook personnalisé
+  const { artisans } = ShowArtisanNote(); // Utilisation du hook Show
+  const { renderStars } = Stars_icon(); // Utilisez le hook stars_icon
 
   return (
     <div>
