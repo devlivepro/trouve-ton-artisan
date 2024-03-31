@@ -6,10 +6,11 @@ import Footer from "../components/Footer";
 
 // Import hooks
 import Filter_artisan_category_note from "../hooks/Filter_artisan_category_note";
+import Stars_icon from "../hooks/Stars_icon";
 
 function Craftsman() {
-  const { artisans, renderStars, selectedCategory, filterArtisansByCategory } =
-    Filter_artisan_category_note(); // Utilisation du hook personnalisé
+  const { artisans, selectedCategory } = Filter_artisan_category_note(); // Utilisation du hook filter
+  const { renderStars } = Stars_icon(); // Utilisez le hook stars_icon
 
   return (
     <div>
@@ -17,22 +18,9 @@ function Craftsman() {
 
       <main className="container">
         <div>
-          <h1 className="text-center">Liste des artisans</h1>
-        </div>
-
-        {/* Liste déroulante des catégories */}
-        <div className="mb-3">
-          <select
-            className="form-select"
-            value={selectedCategory}
-            onChange={(e) => filterArtisansByCategory(e.target.value)}
-          >
-            <option value="">Toutes les catégories</option>
-            <option value="Bâtiment">Bâtiment</option>
-            <option value="Services">Service</option>
-            <option value="Fabrication">Fabrication</option>
-            <option value="Alimentation">Alimentation</option>
-          </select>
+          <h1 className="text-center border-text">
+            Liste des artisans dans le bâtiments
+          </h1>
         </div>
 
         <div className="row">
@@ -58,7 +46,7 @@ function Craftsman() {
                     </p>
                     <div>
                       <Link
-                        to={`/artisan/${artisan.id}`}
+                        to={`/cardcraftsman/${artisan.id}`}
                         className="btn btn-primary"
                       >
                         Voir détails
