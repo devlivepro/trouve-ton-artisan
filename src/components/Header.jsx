@@ -1,16 +1,14 @@
 import React from "react";
-import { Container, Navbar, Nav, Form, FormControl } from 'react-bootstrap';
+import { Container, Navbar, Nav, Form, FormControl } from "react-bootstrap";
 
 import logo from "../assets/img/Logo.png";
-import '../assets/css/styles.css';
+import "../assets/css/styles.css";
 
 function Header() {
   return (
     <header>
       <Navbar expand="lg" className="color-template1">
-        <Container
-          className="justify-content-between"
-        >
+        <Container className="justify-content-between">
           {/* Logo */}
           <Navbar.Brand href="/">
             <img
@@ -28,9 +26,9 @@ function Header() {
           >
             <Nav>
               <Nav.Link href="/craftsman">Bâtiment</Nav.Link>
-              <Nav.Link href="#">Services</Nav.Link>
-              <Nav.Link href="#">Fabrication</Nav.Link>
-              <Nav.Link href="#">Alimentation</Nav.Link>
+              <Nav.Link href="/cardservice">Services</Nav.Link>
+              <Nav.Link href="/cardmanufacturing">Fabrication</Nav.Link>
+              <Nav.Link href="/cardfood">Alimentation</Nav.Link>
             </Nav>
             {/* Search bar */}
             <Form>
