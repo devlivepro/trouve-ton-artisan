@@ -19,7 +19,7 @@ function Craftsman() {
       <main className="container">
         <div>
           <h1 className="text-center border-text">
-            Liste des artisans dans le bâtiments
+            Liste des artisans dans le Bâtiment
           </h1>
         </div>
 

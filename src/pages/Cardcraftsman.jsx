@@ -27,7 +27,7 @@ function Card_crafts_man() {
       <main className="container">
         <div>
           <h1 className="text-center border-text">
-            Liste des artisans dans le bâtiments
+            Description de l'artisan
           </h1>
         </div>
 
