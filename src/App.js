@@ -7,6 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import Craftsman from "./pages/Craftsman";
 import Cardcraftsman from "./pages/Cardcraftsman";
+import Cardservice from "./pages/Cardservice";
+import Cardmanufacturing from "./pages/Cardmanufacturing";
+import Cardfood from "./pages/Cardfood";
 
 export default function App() {
   return (
@@ -18,6 +21,9 @@ export default function App() {
           <Route path="/craftsman" element={<Craftsman />} />
           {/* Route pour gérer /artisan/:id */}
           <Route path="/cardcraftsman/:id" element={<Cardcraftsman />} />{" "}
+          <Route path="/cardservice" element={<Cardservice />} />
+          <Route path="/cardmanufacturing" element={<Cardmanufacturing />} />
+          <Route path="/cardfood" element={<Cardfood />} />
         </Routes>
       </div>
     </Router>
