@@ -11,6 +11,9 @@ import Cardservice from "./pages/Cardservice";
 import Cardmanufacturing from "./pages/Cardmanufacturing";
 import Cardfood from "./pages/Cardfood";
 
+//Page 404
+import Notfound from "./pages/Notfound";
+
 export default function App() {
   return (
     <Router>
@@ -24,6 +27,7 @@ export default function App() {
           <Route path="/cardservice" element={<Cardservice />} />
           <Route path="/cardmanufacturing" element={<Cardmanufacturing />} />
           <Route path="/cardfood" element={<Cardfood />} />
+          <Route path="*" element={<Notfound />} /> {/* Si aucune route ne correspond, affiche Notfound */}
         </Routes>
       </div>
     </Router>
