@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav, Form, FormControl } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+
 import logo from "../assets/img/Logo.png";
 import "../assets/css/styles.css";
 
@@ -53,11 +55,36 @@ function Header() {
             className="justify-content-end"
           >
             <Nav>
-              <Nav.Link href="/craftsman">Bâtiment</Nav.Link>
-              <Nav.Link href="/cardservice">Services</Nav.Link>
-              <Nav.Link href="/cardmanufacturing">Fabrication</Nav.Link>
-              <Nav.Link href="/cardfood">Alimentation</Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                to="/craftsman"
+                active={window.location.pathname === "/craftsman"}
+              >
+                Bâtiment
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                to="/cardservice"
+                active={window.location.pathname === "/cardservice"}
+              >
+                Services
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                to="/cardmanufacturing"
+                active={window.location.pathname === "/cardmanufacturing"}
+              >
+                Fabrication
+              </Nav.Link>
+              <Nav.Link
+                as={NavLink}
+                to="/cardfood"
+                active={window.location.pathname === "/cardfood"}
+              >
+                Alimentation
+              </Nav.Link>
             </Nav>
+
             <div className="search-container" style={{ position: "relative" }}>
               <Form>
                 <FormControl
@@ -74,9 +101,15 @@ function Header() {
                     {searchResults.map((result, index) => (
                       <li key={index}>
                         <a href={`/cardcraftsman/${result.id}`}>
-                          <p><strong>Nom:</strong> {result.name} -{" "}</p>
-                          <p><strong>Spécialité:</strong> {result.specialty} -{" "}</p>
-                          <p><strong>Localisation:</strong> {result.location}</p>
+                          <p>
+                            <strong>Nom:</strong> {result.name} -{" "}
+                          </p>
+                          <p>
+                            <strong>Spécialité:</strong> {result.specialty} -{" "}
+                          </p>
+                          <p>
+                            <strong>Localisation:</strong> {result.location}
+                          </p>
                         </a>
                       </li>
                     ))}

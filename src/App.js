@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import "./assets/css/styles-mobile.css"; // Importez votre fichier de styles mobiles
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //Page navigations
