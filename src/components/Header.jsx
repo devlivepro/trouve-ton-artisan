@@ -58,32 +58,34 @@ function Header() {
               <Nav.Link href="/cardmanufacturing">Fabrication</Nav.Link>
               <Nav.Link href="/cardfood">Alimentation</Nav.Link>
             </Nav>
-            <Form>
-              <FormControl
-                type="text"
-                value={searchTerm}
-                onChange={handleSearch}
-                placeholder="Rechercher..."
-              />
-            </Form>
+            <div className="search-container" style={{ position: "relative" }}>
+              <Form>
+                <FormControl
+                  type="text"
+                  value={searchTerm}
+                  onChange={handleSearch}
+                  placeholder="Rechercher..."
+                />
+              </Form>
+              {/* Afficher les suggestions d'autocomplete */}
+              {searchTerm && (
+                <div className="autocomplete">
+                  <ul>
+                    {searchResults.map((result, index) => (
+                      <li key={index}>
+                        <a href={`/cardcraftsman/${result.id}`}>
+                          <p><strong>Nom:</strong> {result.name} -{" "}</p>
+                          <p><strong>Spécialité:</strong> {result.specialty} -{" "}</p>
+                          <p><strong>Localisation:</strong> {result.location}</p>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </Navbar.Collapse>
         </Container>
-        {/* Afficher les suggestions d'autocomplete */}
-        {searchTerm && (
-          <div className="autocomplete">
-            <ul>
-              {searchResults.map((result, index) => (
-                <li key={index}>
-                  <a href={`/cardcraftsman/${result.id}`}>
-                    <strong>Nom:</strong> {result.name} -{" "}
-                    <strong>Spécialité:</strong> {result.specialty} -{" "}
-                    <strong>Localisation:</strong> {result.location}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </Navbar>
     </header>
   );

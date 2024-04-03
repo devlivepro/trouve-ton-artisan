@@ -32,7 +32,9 @@ function Footer() {
 
           {/* Bloc 2 */}
           <div className="col-md-4 col-sm-12 mt-4">
-            <h2 className="color-template1"><strong>Lyon</strong></h2>
+            <h2 className="color-template1">
+              <strong>Lyon</strong>
+            </h2>
             <address>
               <p className="color-template1">101 cours Charlemagne</p>
               <p className="color-template1">CS 20033</p>
@@ -47,37 +49,64 @@ function Footer() {
           {/* Bloc 3 */}
           <div className="col-md-12 col-sm-12 d-flex justify-content-center flex-wrap">
             <ul className="d-flex justify-content-center">
-              <Link to="#" className="color-template1">Mentions Légales</Link>
-              <Link to="#" className="color-template1">Données Personnelles</Link>
-              <Link to="#" className="color-template1">Accessibilité</Link>
-              <Link to="#" className="color-template1">Gestion des cookies</Link>
-            </ul>
-          </div>
-
-        </div>
-          </div>
-          {/* Bloc 4: Icons */}
-          <div className="col-md-12 text-center">
-            <div className="social-footer_container mb-4">
-            <ul className="social_footer_ul">
               <li>
-                <Link to="http://webenlance.com">
-                  <FontAwesomeIcon icon={faFacebookF} />
+                <Link to="#" className="color-template1">
+                  Mentions Légales
                 </Link>
               </li>
               <li>
-                <Link to="http://webenlance.com">
-                  <FontAwesomeIcon icon={faTwitter} />
+                <Link to="#" className="color-template1">
+                  Données Personnelles
                 </Link>
               </li>
               <li>
-                <Link to="http://webenlance.com">
-                  <FontAwesomeIcon icon={faInstagram} />
+                <Link to="#" className="color-template1">
+                  Accessibilité
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="color-template1">
+                  Gestion des cookies
                 </Link>
               </li>
             </ul>
-            </div>
+          </div>
         </div>
+      </div>
+      {/* Bloc 4: Icons */}
+      <div className="col-md-12 text-center">
+        <div className="social-footer_container mb-4">
+          <ul className="social_footer_ul">
+            <li>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   );
 }
