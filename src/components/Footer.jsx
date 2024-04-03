@@ -10,7 +10,7 @@ import {
 
 // import logo from "../assets/img/Logo.png";
 import "../assets/css/styles.css";
-import logo from "../assets/img/Logo.png";
+import logo from "../assets/img/Logo_footer.png";
 
 function Footer() {
   return (
@@ -24,7 +24,7 @@ function Footer() {
               className="logo-img"
               alt="Logo trouve ton artisan"
             />
-            <p>
+            <p className="color-template1">
               Votre plateforme pour trouver des artisans qualifiés près de chez
               vous.
             </p>
@@ -32,13 +32,13 @@ function Footer() {
 
           {/* Bloc 2 */}
           <div className="col-md-4 col-sm-12 mt-4">
-            <h4>Lyon</h4>
+            <h2 className="color-template1"><strong>Lyon</strong></h2>
             <address>
-              <p>101 cours Charlemagne</p>
-              <p>CS 20033</p>
-              <p>69269 LYON CEDEX 02</p>
-              <p>France</p>
-              <p>+33 (0)4 26 73 40 00</p>
+              <p className="color-template1">101 cours Charlemagne</p>
+              <p className="color-template1">CS 20033</p>
+              <p className="color-template1">69269 LYON CEDEX 02</p>
+              <p className="color-template1">France</p>
+              <p className="color-template1">+33 (0)4 26 73 40 00</p>
             </address>
           </div>
 
@@ -47,10 +47,10 @@ function Footer() {
           {/* Bloc 3 */}
           <div className="col-md-12 col-sm-12 d-flex justify-content-center flex-wrap">
             <ul className="d-flex justify-content-center">
-              <li>Mentions Légales</li>
-              <li>Données Personnelles</li>
-              <li>Accessibilité</li>
-              <li>Gestion des cookies</li>
+              <Link to="#" className="color-template1">Mentions Légales</Link>
+              <Link to="#" className="color-template1">Données Personnelles</Link>
+              <Link to="#" className="color-template1">Accessibilité</Link>
+              <Link to="#" className="color-template1">Gestion des cookies</Link>
             </ul>
           </div>
 
