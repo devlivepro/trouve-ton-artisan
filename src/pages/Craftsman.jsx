@@ -19,7 +19,7 @@ function Craftsman() {
       <main className="container">
         <div>
           <h1 className="text-center border-text">
-            Liste des artisans dans le Bâtiment
+            Liste des artisans Bâtiments
           </h1>
         </div>
 
@@ -34,22 +34,22 @@ function Craftsman() {
               <div key={index} className="col-lg-4 mb-4">
                 <div className="card">
                   <div className="card-body">
-                    <h5 className="card-title">{artisan.name}</h5>
+                    <h2 className="card-title">{artisan.name}</h2>
                     <p className="card-text">
-                      Note : {renderStars(artisan.note)}
+                      <strong>Note</strong> : {renderStars(artisan.note)}
                     </p>
                     <p className="card-text">
-                      Spécialité : {artisan.specialty}
+                      <strong>Spécialité</strong> : {artisan.specialty}
                     </p>
                     <p className="card-text">
-                      Localisation : {artisan.location}
+                      <strong>Localisation</strong> : {artisan.location}
                     </p>
                     <div>
                       <Link
                         to={`/cardcraftsman/${artisan.id}`}
                         className="btn btn-primary"
                       >
-                        Voir détails
+                        En savoir plus
                       </Link>
                     </div>
                   </div>
