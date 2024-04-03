@@ -1,6 +1,30 @@
+@font-face {
+  font-family: "Graphik";
+  src: url("../fonts/Graphik-Black.woff") format("woff"),
+    url("../fonts/Graphik-BlackItalic.woff") format("woff"),
+    url("../fonts/Graphik-Bold.woff") format("woff"),
+    url("../fonts/Graphik-BoldItalic.woff") format("woff"),
+    url("../fonts/Graphik-Extralight.woff") format("woff"),
+    url("../fonts/Graphik-ExtralightItalic.woff") format("woff"),
+    url("../fonts/Graphik-Light.woff") format("woff"),
+    url("../fonts/Graphik-LightItalic.woff") format("woff"),
+    url("../fonts/Graphik-Medium.woff") format("woff"),
+    url("../fonts/Graphik-MediumItalic.woff") format("woff"),
+    url("../fonts/Graphik-Regular.woff") format("woff"),
+    url("../fonts/Graphik-RegularItalic.woff") format("woff"),
+    url("../fonts/Graphik-Semibold.woff") format("woff"),
+    url("../fonts/Graphik-SemiboldItalic.woff") format("woff")
+      url("../fonts/Graphik-Super.woff") format("woff"),
+    url("../fonts/Graphik-Super.woff") format("woff"),
+    url("../fonts/Graphik-Thin.woff") format("woff"),
+    url("../fonts/Graphik-ThinItalic.woff") format("woff");
+}
+
 body {
-  margin: 0;
-  background-color: #eee;
+  color: #353d4d;
+  font-family: "Graphik, sans-sérif";
+  font-size: 1.2rem;
+  line-height: 1.625;
 }
 p {
   margin: 0;
@@ -8,9 +32,24 @@ p {
 a {
   text-decoration: none;
 }
-div{
+li {
+  list-style: none;
+  margin-left: 40px;
   margin-top: 10px;
-  margin-block-end: 10px;
+}
+ul {
+  list-style-type: none; /* Supprime les puces de liste */
+  padding: 0; /* Supprime le remplissage interne */
+  margin: 0; /* Supprime les marges externes */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Graphik";
+  color: #00497c;
 }
 .bold {
   font-weight: 600;
@@ -39,13 +78,13 @@ div{
 .color-template6 {
   background-color: #82b864;
 }
-.border-text{
-  border-bottom: 5px solid #0074c7;
+.border-text {
+  border-bottom: 5px solid #82b864;
   margin-top: 20px;
   margin-block-end: 6%;
   width: 800px;
   margin-left: auto;
-  margin-right: auto;;
+  margin-right: auto;
 }
 .star-icon {
   color: #cd2c2e;
@@ -76,6 +115,25 @@ aside {
 .logo-img {
   height: 100px;
   display: inline-block;
+}
+.c-title-line {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  max-width: 80%;
+  margin: 0;
+  margin-left: 0px;
+  padding: 6rem 3rem 6rem 0;
+  line-height: 1.4;
+}
+.c-title-line::before {
+  position: absolute;
+  top: 3.6rem;
+  left: 0;
+  width: 3rem;
+  height: 0.6rem;
+  content: "";
+  background: #0074c7;
 }
 .find-artisan-section {
   margin-top: 10px;
@@ -112,97 +170,63 @@ aside {
   align-items: center;
   margin-right: 20px;
 }
+.card {
+  margin-block-end: 10px;
+}
 .card-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
+.form-group {
+  margin-block-end: 10px;
+}
 .col_white_amrc {
   color: #fff;
 }
-footer {
-  width: 100%;
-  background-color: #0074c7;
-  min-height: 250px;
-  padding: 10px 0px 25px 0px;
-}
-.pt2 {
-  padding-top: 40px;
-  margin-bottom: 20px;
-}
-footer p {
-  font-size: 13px;
-  color: #f1f8fc;
-  padding-bottom: 0px;
-  margin-bottom: 8px;
-}
-.mb10 {
-  padding-bottom: 15px;
-}
-.footer_ul_amrc {
-  margin: 0px;
-  list-style-type: none;
-  font-size: 14px;
-  padding: 0px 0px 10px 0px;
-}
-.footer_ul_amrc li {
-  padding: 0px 0px 5px 0px;
-}
-.footer_ul_amrc li a {
-  color: #f1f8fc;
-}
-.footer_ul_amrc li a:hover {
+.c-footer_wrapper {
+  position: relative;
+  z-index: 1;
+  padding-top: 9rem;
+  padding-bottom: 1rem;
   color: #fff;
-  text-decoration: none;
 }
-.fleft {
-  float: left;
+.c-footer_wrapper::before {
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  left: 0;
+  height: 6rem;
+  content: "";
+  border-radius: 0 0 10rem 10rem;
+  background: #fff;
 }
-.padding-right {
-  padding-right: 10px;
+.c-footer_wrapper::after {
+  position: absolute;
+  top: 2.2rem;
+  left: 4rem;
+  width: 0;
+  height: 0;
+  content: "";
+  transform: rotate(90deg);
+  border-right: 3.2rem solid rgba(0, 0, 0, 0);
+  border-bottom: 4rem solid #fff;
+  border-left: 3.2rem solid rgba(0, 0, 0, 0);
 }
-
-.footer_ul2_amrc {
-  margin: 0px;
-  list-style-type: none;
-  padding: 0px;
+footer {
+  background-color: #0074c7;
+  padding: 0;
+  width: 100%;
 }
-.footer_ul2_amrc li p {
-  display: table;
+.social-footer_container {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  background-color: white;
 }
-.footer_ul2_amrc li a:hover {
-  text-decoration: none;
-}
-.footer_ul2_amrc li i {
-  margin-top: 5px;
-}
-
-.bottom_border {
-  border-bottom: 1px solid #f1f8fc;
-  padding-bottom: 20px;
-}
-.foote_bottom_ul_amrc {
-  list-style-type: none;
-  padding: 0px;
-  display: table;
-  margin-top: 10px;
-  margin-right: auto;
-  margin-bottom: 10px;
-  margin-left: auto;
-}
-.foote_bottom_ul_amrc li {
-  display: inline;
-}
-.foote_bottom_ul_amrc li a {
-  color: #f1f8fc;
-  margin: 0 12px;
-}
-
 .social_footer_ul {
-  display: table;
-  margin: 15px auto 0 auto;
-  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }
 .social_footer_ul li {
   padding-left: 20px;
@@ -210,7 +234,7 @@ footer p {
   float: left;
 }
 .social_footer_ul li a {
-  color: #ccc;
+  color: #384050;
   padding: 8px;
   border-radius: 50%;
 }
@@ -218,4 +242,51 @@ footer p {
   width: 20px;
   height: 20px;
   text-align: center;
+}
+.pt2 {
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.page404 {
+  text-align: center;
+}
+.not-found-image {
+  width: 700px;
+  height: 600px;
+}
+.autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-top: none;
+  width: 100%;
+  overflow: auto; /* Ajout de la propriété overflow */
+}
+
+.autocomplete ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.autocomplete li {
+  padding: 10px;
+  border-bottom: 1px solid #ced4da;
+  max-width: 100%; /* Empêcher les éléments de déborder */
+  white-space: nowrap; /* Empêcher le saut de ligne */
+  overflow: hidden; /* Masquer le contenu qui déborde */
+  text-overflow: ellipsis; /* Afficher des points de suspension pour le contenu qui déborde */
+}
+
+.autocomplete li:last-child {
+  border-bottom: none;
 }
