@@ -55,7 +55,7 @@
 		"location": "Aix-les-bains",
 		"about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",
 		"email":"claude.quinn@gmail.com",
-		"website":"",
+		"website":"https://bijouteriedusud.com",
 		"category":"Fabrication",
 		"top": false
 	},
@@ -67,7 +67,7 @@
 		"location": "Valence",
 		"about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",
 		"email":"v-laredoute@gmail.com",
-		"website":"",
+		"website":"https://toiletteurpro.com",
 		"category":"Services",
 		"top": false
 	},
@@ -103,7 +103,7 @@
 		"location": "Evian",
 		"about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",
 		"email":"o-salmons@live.com",
-		"website":"",
+		"website":"https://chauffageexpress.com",
 		"category":"Bâtiment",
 		"top": true
 	},
@@ -115,7 +115,7 @@
 		"location": "Montélimar",
 		"about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",
 		"email":"aupainchaud@hotmail.com",
-		"website":"",
+		"website":"https://artisanalboulangerie.com",
 		"category":"Alimentation",
 		"top": true
 	},
@@ -127,7 +127,7 @@
 		"location": "Lyon",
 		"about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",
 		"email":"boucherie.dumond@gmail.com",
-		"website":"",
+		"website":"https://boucherbio.com",
 		"category":"Alimentation",
 		"top": false
 	},
@@ -175,7 +175,7 @@
 		"location": "Saint-Priest",
 		"about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",
 		"email":"r.charbonneau@gmail.com",
-		"website":"",
+		"website":"https://carrosserieplus.com",
 		"category":"Services",
 		"top": false
 	},
@@ -187,7 +187,7 @@
 		"location": "Le Puy-en-Velay",
 		"about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin. ",
 		"email":"e-carigan@hotmail.com",
-		"website":"",
+		"website":"https://ferronierartisan.com",
 		"category":"Fabrication",
 		"top": false
 	},
