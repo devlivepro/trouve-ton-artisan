@@ -1,15 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav, Form, FormControl } from "react-bootstrap";
-
 import logo from "../assets/img/Logo.png";
 import "../assets/css/styles.css";
 
 function Header() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [allData, setAllData] = useState([]);
+
+  useEffect(() => {
+    // Charger les données JSON lorsque le composant est monté
+    fetch("/datas.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setAllData(data); // Stocker toutes les données dans l'état local
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []); // Utiliser un tableau vide pour exécuter cet effet une seule fois lors du montage
+
+  const handleSearch = (event) => {
+    const inputSearchTerm = event.target.value;
+    setSearchTerm(inputSearchTerm); // Mettre à jour la valeur de recherche
+
+    // Filtrer les données en fonction de la valeur de recherche
+    const filteredData = allData.filter(
+      (data) =>
+        // Vérifier si le nom, la spécialité ou la ville correspondent à la recherche
+        data.name.toLowerCase().includes(inputSearchTerm.toLowerCase()) ||
+        data.specialty.toLowerCase().includes(inputSearchTerm.toLowerCase()) ||
+        data.location.toLowerCase().includes(inputSearchTerm.toLowerCase())
+    );
+
+    setSearchResults(filteredData); // Mettre à jour les résultats de la recherche
+  };
+
   return (
     <header>
       <Navbar expand="lg" className="color-template1">
         <Container className="justify-content-between">
-          {/* Logo */}
           <Navbar.Brand href="/">
             <img
               src={logo}
@@ -17,8 +47,6 @@ function Header() {
               alt="Logo trouve ton artisan"
             />
           </Navbar.Brand>
-
-          {/* Menu items */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
@@ -30,16 +58,32 @@ function Header() {
               <Nav.Link href="/cardmanufacturing">Fabrication</Nav.Link>
               <Nav.Link href="/cardfood">Alimentation</Nav.Link>
             </Nav>
-            {/* Search bar */}
             <Form>
               <FormControl
                 type="text"
-                placeholder="Search..."
-                className="mr-sm-2"
+                value={searchTerm}
+                onChange={handleSearch}
+                placeholder="Rechercher..."
               />
             </Form>
           </Navbar.Collapse>
         </Container>
+        {/* Afficher les suggestions d'autocomplete */}
+        {searchTerm && (
+          <div className="autocomplete">
+            <ul>
+              {searchResults.map((result, index) => (
+                <li key={index}>
+                  <a href={`/cardcraftsman/${result.id}`}>
+                    <strong>Nom:</strong> {result.name} -{" "}
+                    <strong>Spécialité:</strong> {result.specialty} -{" "}
+                    <strong>Localisation:</strong> {result.location}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </Navbar>
     </header>
   );

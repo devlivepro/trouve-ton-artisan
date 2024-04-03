@@ -18,6 +18,9 @@ function Home() {
 
       <main className="container">
         <section className="find-artisan-section">
+          <h1>
+            Trouve ton artisan
+          </h1>
           <div className="content">
             <div className="steps">
               <div className="step">
