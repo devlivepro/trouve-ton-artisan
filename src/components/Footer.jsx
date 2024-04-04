@@ -8,17 +8,16 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-// import logo from "../assets/img/Logo.png";
 import "../assets/css/styles.css";
-import logo from "../assets/img/Logo_footer.png";
+import logo from "../assets/img/Logo_footer.webp";
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container mb-4">
+      <div className="container mb-4 mt-5 logo_footer">
         <div className="row">
           {/* Bloc 1: Logo */}
-          <div className="col-md-4 col-sm-12 mt-4">
+          <div className="col-md-4 col-sm-12 margin_footer">
             <img
               src={logo}
               className="logo-img"
@@ -31,7 +30,7 @@ function Footer() {
           </div>
 
           {/* Bloc 2 */}
-          <div className="col-md-4 col-sm-12 mt-4">
+          <div className="col-md-4 col-sm-12 margin_footer">
             <h2 className="color-template1">
               <strong>Lyon</strong>
             </h2>
@@ -47,8 +46,8 @@ function Footer() {
           <span className="border"></span>
 
           {/* Bloc 3 */}
-          <div className="col-md-12 col-sm-12 d-flex justify-content-center flex-wrap">
-            <ul className="d-flex justify-content-center">
+          <div className="container_link_footer">
+            <ul className="link_footer">
               <li>
                 <Link to="#" className="color-template1">
                   Mentions Légales
@@ -73,6 +72,7 @@ function Footer() {
           </div>
         </div>
       </div>
+
       {/* Bloc 4: Icons */}
       <div className="col-md-12 text-center">
         <div className="social-footer_container mb-4">
@@ -84,6 +84,7 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebookF} />
+                <span className="sr-only">Facebook</span>
               </a>
             </li>
             <li>
@@ -93,6 +94,7 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faTwitter} />
+                <span className="sr-only">Twitter</span>
               </a>
             </li>
             <li>
@@ -102,6 +104,7 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} />
+                <span className="sr-only">Instagram</span>
               </a>
             </li>
           </ul>
