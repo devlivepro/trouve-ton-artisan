@@ -156,6 +156,7 @@ aside {
 .step-icon {
   width: 40px;
   height: 40px;
+  margin-block-end: 10px;
   border-radius: 50%;
   background-color: #0074c7;
   color: #fff;
