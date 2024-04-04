@@ -1,53 +1,75 @@
 import React from "react";
-import ShowArtisanNote from "../hooks/Show_artisan_note"; // Importation votre hook personnalisé
+import ShowArtisanNote from "../hooks/Show_artisan_note"; // Importation de votre hook personnalisé
 
-// Import pages
+// Import des pages
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-// Import hook
+// Import du hook
 import Stars_icon from "../hooks/Stars_icon";
 
 function Home() {
   const { artisans } = ShowArtisanNote(); // Utilisation du hook Show
-  const { renderStars } = Stars_icon(); // Utilisez le hook stars_icon
+  const { renderStars } = Stars_icon(); // Utilisation du hook stars_icon
 
   return (
     <div>
       <Header />
 
       <main className="container">
-        <section className="find-artisan-section">
-          <h1>
-            Trouve ton artisan
-          </h1>
+        {/* Rubrique "Comment trouver mon artisan ?" */}
+        <section className="find-artisan-section mt-5">
+          <h1>Comment trouver mon artisan ?</h1>
           <div className="content">
             <div className="steps">
-              <div className="step">
-                <div className="step-icon">1</div>
-                <p>
-                  Sélectionnez la catégorie d'artisanat dans le menu déroulant.
-                </p>
+              {/* Étape 1: Choisir la catégorie d’artisanat */}
+              <div className="step mb-4 mr-md-4">
+                {" "}
+                <div className="step-icon-container">
+                  <div className="step-icon">1</div>
+                </div>
+                <div className="step-content">
+                  <p>Choisissez une catégorie d'artisanat dans le menu.</p>
+                </div>
               </div>
-              <div className="step">
-                <div className="step-icon">2</div>
-                <p>
-                  Parcourez la liste des artisans disponibles dans la catégorie
-                  sélectionnée.
-                </p>
-                <p>Cliquez sur le profil de l'artisan pour voir ses détails.</p>
+              {/* Étape 2: Choisir un artisan */}
+              <div className="step mb-4 mr-md-4">
+                <div className="step-icon-container">
+                  <div className="step-icon">2</div>
+                </div>
+                <div className="step-content">
+                  <p>
+                    Parcourez la liste des artisans disponibles dans la
+                    catégorie sélectionnée.Cliquez sur le profil de l'artisan pour voir ses
+                    détails.
+                  </p>
+                </div>
               </div>
-              <div className="step">
-                <div className="step-icon">3</div>
-                <p>
-                  Remplissez le formulaire de contact avec vos coordonnées et
-                  votre message.
-                </p>
-                <p>Envoyez le formulaire.</p>
+              {/* Étape 3: Contacter l'artisan via le formulaire de contact */}
+              <div className="step mb-4 mr-md-4">
+                {" "}
+                <div className="step-icon-container">
+                  <div className="step-icon">3</div> {/* Contenu de l'icône */}
+                </div>
+                <div className="step-content">
+                  <p>
+                    Remplissez le formulaire de contact avec vos coordonnées et
+                    votre message, puis envoyez le formulaire.
+                  </p>
+                </div>
               </div>
-              <div className="step">
-                <div className="step-icon">4</div>
-                <p>Vous recevrez une réponse de l'artisan sous 48 heures.</p>
+              {/* Étape 4: Réponse de l'artisan sous 48 heures */}
+              <div className="step mb-4 mr-md-4">
+                {" "}
+                <div className="step-icon-container">
+                  <div className="step-icon">4</div>
+                </div>
+                <div className="step-content">
+                  <p>
+                    Vous recevrez une réponse de l'artisan dans les 48 heures
+                    suivant l'envoi du formulaire.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -55,7 +77,8 @@ function Home() {
 
         {/* Le top 3 des artisans */}
         <section>
-          <h2 className="mb-4">Les artisans du mois</h2>
+          <h2 className="mt-5">Les artisans du mois</h2>
+
           <div className="row">
             {artisans.slice(0, 3).map((artisan) => (
               <div key={artisan.id} className="col-md-4 mb-4">
@@ -65,9 +88,11 @@ function Home() {
                     <p className="card-text">
                       Note : {renderStars(artisan.note)}
                     </p>
-                    <p className="card-text">Spécialité: {artisan.specialty}</p>
                     <p className="card-text">
-                      Localisation: {artisan.location}
+                      Spécialité : {artisan.specialty}
+                    </p>
+                    <p className="card-text">
+                      Localisation : {artisan.location}
                     </p>
                   </div>
                 </div>
@@ -76,6 +101,7 @@ function Home() {
           </div>
         </section>
       </main>
+
       <Footer />
     </div>
   );
