@@ -23,7 +23,7 @@ function Home() {
           <div className="content">
             <div className="steps">
               {/* Étape 1: Choisir la catégorie d’artisanat */}
-              <div className="step mb-4 mr-md-4">
+              <div className="step mb-4 mr-md-4 ">
                 {" "}
                 <div className="step-icon-container">
                   <div className="step-icon">1</div>
@@ -40,8 +40,8 @@ function Home() {
                 <div className="step-content">
                   <p>
                     Parcourez la liste des artisans disponibles dans la
-                    catégorie sélectionnée.Cliquez sur le profil de l'artisan pour voir ses
-                    détails.
+                    catégorie sélectionnée.Cliquez sur le profil de l'artisan
+                    pour voir ses détails.
                   </p>
                 </div>
               </div>
