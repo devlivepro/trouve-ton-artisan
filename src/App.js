@@ -1,7 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "./assets/css/styles-mobile.css"; // Importez votre fichier de styles mobiles
+import "./assets/css/styles-mobile.css"; // Importation du fichier de styles mobiles
+import "./assets/css/styles-tablet.css"; // Importation du fichier de styles tablet
+import "./assets/css/styles.css"; // Importation du fichier de styles tablet
+import "./assets/css/styles.min.css"; // Importation du fichier de styles min
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
