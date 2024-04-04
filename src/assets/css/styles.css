@@ -1,28 +1,16 @@
 @font-face {
   font-family: "Graphik";
-  src: url("../fonts/Graphik-Black.woff") format("woff"),
-    url("../fonts/Graphik-BlackItalic.woff") format("woff"),
-    url("../fonts/Graphik-Bold.woff") format("woff"),
+  src: url("../fonts/Graphik-Bold.woff") format("woff"),
     url("../fonts/Graphik-BoldItalic.woff") format("woff"),
-    url("../fonts/Graphik-Extralight.woff") format("woff"),
-    url("../fonts/Graphik-ExtralightItalic.woff") format("woff"),
-    url("../fonts/Graphik-Light.woff") format("woff"),
-    url("../fonts/Graphik-LightItalic.woff") format("woff"),
-    url("../fonts/Graphik-Medium.woff") format("woff"),
-    url("../fonts/Graphik-MediumItalic.woff") format("woff"),
     url("../fonts/Graphik-Regular.woff") format("woff"),
     url("../fonts/Graphik-RegularItalic.woff") format("woff"),
-    url("../fonts/Graphik-Semibold.woff") format("woff"),
-    url("../fonts/Graphik-SemiboldItalic.woff") format("woff")
-      url("../fonts/Graphik-Super.woff") format("woff"),
-    url("../fonts/Graphik-Super.woff") format("woff"),
     url("../fonts/Graphik-Thin.woff") format("woff"),
     url("../fonts/Graphik-ThinItalic.woff") format("woff");
 }
 
 body {
+  font-family: "Graphik" !important;
   color: #353d4d;
-  font-family: "Graphik, sans-sérif";
   font-size: 1.2rem;
   line-height: 1.625;
 }
@@ -30,11 +18,12 @@ p {
   margin: 0;
 }
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  margin-top: 10px;
+  padding: 10px;
 }
 li {
   list-style: none;
-  margin-left: 40px;
   margin-top: 10px;
 }
 ul {
@@ -61,22 +50,22 @@ h6 {
   font-family: "Nunito Sans", sans-serif;
 }
 .color-template1 {
-  background-color: #f1f8fc;
+  color: #f1f8fc;
 }
 .color-template2 {
-  background-color: #0074c7;
+  color: #0074c7;
 }
 .color-template3 {
-  background-color: #00497c;
+  color: #00497c;
 }
 .color-template4 {
-  background-color: #384050;
+  color: #384050;
 }
 .color-template5 {
-  background-color: #cd2c2e;
+  color: #cd2c2e;
 }
 .color-template6 {
-  background-color: #82b864;
+  color: #82b864;
 }
 .border-text {
   border-bottom: 5px solid #82b864;
@@ -113,7 +102,8 @@ aside {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .logo-img {
-  height: 100px;
+  height: 141px;
+  width: 250px;
   display: inline-block;
 }
 .c-title-line {
@@ -147,16 +137,21 @@ aside {
 }
 .steps {
   display: flex;
-  flex-direction: column;
-}
-.step {
+  justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.step {
+  flex: 1;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  display: flex;
-  align-items: center;
+  margin-right: 20px; /* Ajout de la marge à droite */
+}
+
+.step:last-child {
+  margin-right: 0;
 }
 .step-icon {
   width: 40px;
@@ -168,7 +163,11 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
+}
+.step-icon-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .card {
   margin-block-end: 10px;
@@ -184,14 +183,19 @@ aside {
 .col_white_amrc {
   color: #fff;
 }
-.c-footer_wrapper {
+footer {
+  background-color: #0074c7;
+  padding: 0;
+  width: 100%;
+}
+.logo_footer {
   position: relative;
   z-index: 1;
-  padding-top: 9rem;
-  padding-bottom: 1rem;
-  color: #fff;
 }
-.c-footer_wrapper::before {
+.margin_footer {
+  margin-top: 6rem !important;
+}
+.logo_footer::before {
   position: absolute;
   top: -1rem;
   right: 0;
@@ -201,10 +205,10 @@ aside {
   border-radius: 0 0 10rem 10rem;
   background: #fff;
 }
-.c-footer_wrapper::after {
+.logo_footer::after {
   position: absolute;
   top: 2.2rem;
-  left: 4rem;
+  left: 2rem;
   width: 0;
   height: 0;
   content: "";
@@ -213,10 +217,10 @@ aside {
   border-bottom: 4rem solid #fff;
   border-left: 3.2rem solid rgba(0, 0, 0, 0);
 }
-footer {
-  background-color: #0074c7;
-  padding: 0;
-  width: 100%;
+.container_link_footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .social-footer_container {
   margin-right: auto !important;
@@ -243,6 +247,13 @@ footer {
   height: 20px;
   text-align: center;
 }
+.social_footer_ul li a:hover {
+  color: #82b864;
+}
+.link_footer {
+  display: flex;
+  justify-content: center;
+}
 .pt2 {
   padding-top: 40px;
   margin-bottom: 20px;
@@ -261,32 +272,97 @@ footer {
   height: 600px;
 }
 .autocomplete {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  background-color: white;
-  border: 1px solid #ced4da;
-  border-top: none;
-  width: 100%;
-  overflow: auto; /* Ajout de la propriété overflow */
+  position: static;
 }
-
 .autocomplete ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .autocomplete li {
   padding: 10px;
   border-bottom: 1px solid #ced4da;
-  max-width: 100%; /* Empêcher les éléments de déborder */
-  white-space: nowrap; /* Empêcher le saut de ligne */
-  overflow: hidden; /* Masquer le contenu qui déborde */
-  text-overflow: ellipsis; /* Afficher des points de suspension pour le contenu qui déborde */
 }
-
 .autocomplete li:last-child {
   border-bottom: none;
+}
+.form-control {
+  border-radius: 0 !important;
+  border-right: 1px solid #0074c7 !important;
+  border-bottom: 1px solid #0074c7 !important;
+  border-left: transparent !important;
+  border-top: transparent !important;
+  margin-left: 10px;
+}
+.active {
+  border-bottom: 2px solid #0074c7;
+}
+.bs-stepper .step {
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 50%; /* Arrondi pour le numéro d'étape */
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  margin-right: 20px;
+  background-color: #fff;
+  color: #333;
+}
+.linear-stepper {
+  display: flex;
+}
+
+.linear-stepper-item {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: #fff;
+  margin: 0 auto 10px;
+}
+
+.step-label {
+  font-size: 14px;
+}
+
+.linear-stepper-item.active .step-number {
+  background-color: #007bff;
+}
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.cookie-banner p {
+  display: inline-block;
+  margin: 0;
+}
+
+.cookie-banner button {
+  margin-left: 10px;
 }
