@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav, Form, FormControl } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-import logo from "../assets/img/Logo.png";
+import logo from "../assets/img/Logo.webp";
 import "../assets/css/styles.css";
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
   const [allData, setAllData] = useState([]);
 
   useEffect(() => {
-    // Charger les données JSON lorsque le composant est monté
+    // Charge les données JSON lorsque le composant est monté
     fetch("/datas.json")
       .then((response) => response.json())
       .then((data) => {
@@ -35,7 +35,7 @@ function Header() {
         data.location.toLowerCase().includes(inputSearchTerm.toLowerCase())
     );
 
-    setSearchResults(filteredData); // Mettre à jour les résultats de la recherche
+    setSearchResults(filteredData); // Met à jour les résultats de la recherche
   };
 
   return (
@@ -88,6 +88,7 @@ function Header() {
             <div className="search-container" style={{ position: "relative" }}>
               <Form>
                 <FormControl
+                  id="searchField"
                   type="text"
                   value={searchTerm}
                   onChange={handleSearch}
