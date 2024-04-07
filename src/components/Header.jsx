@@ -3,7 +3,6 @@ import { Container, Navbar, Nav, Form, FormControl } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 import logo from "../assets/img/Logo.webp";
-import "../assets/css/styles.css";
 
 function Header() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -40,7 +39,7 @@ function Header() {
 
   return (
     <header>
-      <Navbar expand="lg" className="color-template1">
+      <Navbar expand="lg" className="$color-template1">
         <Container className="justify-content-between">
           <Navbar.Brand href="/">
             <img
