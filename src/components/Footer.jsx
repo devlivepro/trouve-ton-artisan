@@ -8,7 +8,6 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import "../assets/css/styles.css";
 import logo from "../assets/img/Logo_footer.webp";
 
 function Footer() {
@@ -23,7 +22,7 @@ function Footer() {
               className="logo-img"
               alt="Logo trouve ton artisan"
             />
-            <p className="color-template1">
+            <p className="footer_color_link">
               Votre plateforme pour trouver des artisans qualifiés près de chez
               vous.
             </p>
@@ -31,15 +30,15 @@ function Footer() {
 
           {/* Bloc 2 */}
           <div className="col-md-4 col-sm-12 margin_footer">
-            <h2 className="color-template1">
+            <h2 className="footer_color_link">
               <strong>Lyon</strong>
             </h2>
-            <address>
-              <p className="color-template1">101 cours Charlemagne</p>
-              <p className="color-template1">CS 20033</p>
-              <p className="color-template1">69269 LYON CEDEX 02</p>
-              <p className="color-template1">France</p>
-              <p className="color-template1">+33 (0)4 26 73 40 00</p>
+            <address className="footer_color_link">
+              <p>101 cours Charlemagne</p>
+              <p>CS 20033</p>
+              <p>69269 LYON CEDEX 02</p>
+              <p>France</p>
+              <p>+33 (0)4 26 73 40 00</p>
             </address>
           </div>
 
@@ -49,22 +48,22 @@ function Footer() {
           <div className="container_link_footer">
             <ul className="link_footer">
               <li>
-                <Link to="#" className="color-template1">
+                <Link to="#" className="footer_color_link">
                   Mentions Légales
                 </Link>
               </li>
               <li>
-                <Link to="#" className="color-template1">
+                <Link to="#" className="footer_color_link">
                   Données Personnelles
                 </Link>
               </li>
               <li>
-                <Link to="#" className="color-template1">
+                <Link to="#" className="footer_color_link">
                   Accessibilité
                 </Link>
               </li>
               <li>
-                <Link to="#" className="color-template1">
+                <Link to="#" className="footer_color_link">
                   Gestion des cookies
                 </Link>
               </li>
@@ -75,8 +74,8 @@ function Footer() {
 
       {/* Bloc 4: Icons */}
       <div className="col-md-12 text-center">
-        <div className="social-footer_container mb-4">
-          <ul className="social_footer_ul">
+        <div className="social-footer_container">
+          <ul className="social_footer_ul mb-4">
             <li>
               <a
                 href="https://facebook.com"
